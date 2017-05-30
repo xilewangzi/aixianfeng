@@ -1,0 +1,107 @@
+@charset "utf-8";
+*{
+	margin:0;padding:0;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-size: .16rem;
+	font-family:"Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
+	background-color:#efefef;
+}
+/*=================头部=====================*/
+header{
+	border-bottom:1px solid #e0e0e0;
+	background-color:#f9fafd;
+}
+header .hed_goods{
+	width:2.31rem;
+	height:.54rem;
+	text-align:center;
+	line-height:.54rem;
+	margin:0 auto;
+	color:#333;
+	font-size:.16rem;
+	font-weight: bold;
+}
+/*==========================*/
+main{
+	padding-top:.75rem;
+}
+.empty1_img{
+	width:1.64rem;
+	height:1.52rem;
+	margin-left:1.07rem;
+}
+.empty1_img>div{
+	margin:0 auto;
+	width:.96rem;
+	height:.96rem;
+	background:url(image/empty_addrlist-7b6725e9.png) no-repeat;
+	background-size:.96rem auto;
+}
+.empty1_img>p{
+	margin-top:.16rem;
+	color:#999;
+}
+.empty1_goods{
+	text-align:center;
+}
+.empty1_goods a{
+	text-align:center;
+	color:#999;
+	line-height:.28rem;
+	margin:0 auto;
+	display:block;
+	border:1px solid #e0e0e0;
+	width:1.21rem;
+	height:.28rem;
+	border-radius:.04rem;
+}
+
+
+
+
+
+
+
+/*==============底部=========================*/
+footer{
+	width:100%;
+	position:fixed;
+	bottom:0;
+	right:0;
+}
+footer>ul{
+	display: flex;
+	background-color:rgba(246,246,246,.95);
+}
+footer>ul>li{
+	width:25%;
+	height: 0.6rem;
+	margin:auto;
+}
+footer>ul>li>a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+footer>ul>li div{
+	margin: .14rem 0 .05rem .35rem;
+	height:.22rem;
+	background:url(image/xiazei2.png) no-repeat;
+	background-size:.22rem auto;
+}
+footer>ul>li p{
+	color:#777777;
+	font-size:.14rem;
+	text-align:center;
+	margin:0 auto;
+}

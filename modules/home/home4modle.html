@@ -1,0 +1,27 @@
+<script type="text/html" id="home4mb">
+	<ul class="main_list1_3ul1">
+	<%for(var m =0; m<data.act_info[3].act_rows[0].act_rows.length;m++){%>
+		<li style="background-image:url(<%=data.act_info[3].act_rows[0].act_rows[m].chead_detail.img%>"></li>
+	<%}%>
+	</ul>
+	<ul class="main_list1_3ul2">
+	<%for(var m =0; m<data.act_info[3].act_rows[1].act_rows.length;m++){%>
+		<li style="background-image:url(<%=data.act_info[3].act_rows[1].act_rows[m].cactivity_detail.img%>"></li>
+	<%}%>
+	</ul>
+	<ul class="main_list1_ul1">
+
+		<%for(var m =0; m<data.act_info[3].act_rows[2].act_rows.length;m++){%>
+		<li>
+			<div style="background-image:url(<%=data.act_info[3].act_rows[2].act_rows[m].cicons_detail.img%>)"></div>
+			<p><%=data.act_info[3].act_rows[2].act_rows[m].cicons_detail.name%></p>
+		</li>
+		<%}%>
+
+	</ul>
+	<ul class="main_list1_ul4">
+	<%for(var m =0; m<data.act_info[3].act_rows[3].act_rows.length;m++){%>
+		<li style="background-image:url(<%=data.act_info[3].act_rows[3].act_rows[m].activity.img%>)"></li>
+	<%}%>
+	</ul>
+</script>

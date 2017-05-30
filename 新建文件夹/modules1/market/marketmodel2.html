@@ -1,0 +1,25 @@
+<script type="text/html" id="marketright">
+<%for(var m in result){%>
+	<li class="right_list_li">
+		<div class="right_list_img" style="background-image:url(<%=result[m].img%>)">
+		</div>
+		<div class="right_class">
+			<div class="right_class1"><%=result[m].name%></div>
+			<div class="right_class2">
+			<span>精选</span>
+			<span class="last_span"><%=result[m].pm_desc%></span>
+			</div>
+			<div class="right_class3"><%=result[m].specifics%></div>
+			<div class="right_class4">
+				<span>￥<%=result[m].market_price%></span>
+				<span>￥<del><%=result[m].partner_price%></del></span>
+			</div>
+			<div class="num">
+				<span class="red" ></span>
+				<span class="num1"></span>
+				<span class="add" data-img="<%=result[m].img%>" data-num="<%=result[m].id%>"></span>
+			</div>
+		</div>
+	</li>
+<%}%>
+</script>

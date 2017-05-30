@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addres修改</title>
+	<meta name = "viewport" content = "width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="addres_xg.css"/>
+</head>
+<body>
+	<header>
+		<span onclick="window.history.go(-1)">
+		</span>
+		<div>修改地址</div>
+		<span>保存</span>
+	</header>
+	<main>
+		<form>
+			<table class="add_ares">
+				<tr>
+					<th>联系人</th>
+					<td><input type="text" value="某某 先生" placeholder="收货人姓名"/></td>
+				</tr>
+				<tr>
+					<th>&nbsp;</th>
+					<td>
+						<span class="chext_box1">先生</span>
+						<span class="chext_box1">女士</span>
+					</td>
+				</tr>
+				<tr>
+					<th>手机号码</th>
+					<td><input type="text" value="132432435" placeholder="鲜蜂侠联系您的电话" name="telphone"/></td>
+				</tr>
+				<tr>
+					<th>所在城市</th>
+					<td>
+						<select>
+							<option>北京市</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>所在地区</th>
+					<td><input type="text" value="物美超市(天园鑫荣店)" placeholder="请选择您的住宅小区、大厦或学校"/></td>
+				</tr>
+				<tr>
+					<th>详细地址</th>
+					<td><input type="text" value="2" placeholder="请输入楼号门牌号等详细信息"/></td>
+				</tr>
+			</table>
+		</form>
+		<div class="del">
+			删除地址
+		</div>
+	</main>
+	<script type="text/javascript" src="addres_xg.js"></script>
+</body>
+</html>

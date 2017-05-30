@@ -1,0 +1,86 @@
+
+<header class="header2">
+	<div class="hed_goods">购物车</div>
+</header>
+<main class="maincart">
+	<div class="infor">
+		<table class="infor_tab">
+			<tbody>
+				<tr class="tab_tr">
+					<th>收货人</th>
+					<td>某某&nbsp;女士</td>
+					<td rowspan="3" class="revise">
+						<a href="../addres/addres.html">
+							修改
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<th>电话</th>
+					<td>134567980</td>
+				</tr>
+				<tr>
+					<th>收货地址</th>
+					<td>北京市</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div  class="shopgoods">
+		<div class="shopgoods_list1">
+			<span class="shopgoods_list1_1">
+				<span></span>
+				<span>闪送超市</span>
+			</span>
+			<a href="###">凑单专区</a>
+		</div>
+		<p>￥0起送，22:00前满￥30免运费，22:00后满￥69免运费</p>
+		<div class="shopgoods_list2">
+			<div class="shopgoods_list2_1">
+				<span class="shoutime1">收货时间</span>
+				<span class="shoutime2">一小时</span>
+				<a href="###">可预定</a>
+			</div>
+		</div>
+		<div class="shopgoods_list3">
+			<span>收货备注</span>
+			<p><input type="text" value="" placeholder="可输入100字以内特殊要求内容"/></p>
+		</div>
+		<table class="shopgoods_list4">
+			<tbody id="catr_table">
+			<script type="text/html" id="catr_tablemb">
+				<%for(var i in data){%>
+					<tr>
+						<td class="tdchex_boxs">
+							<div></div>
+						</td>
+						<td class="td_imge">
+							<div style="background-image:url(<%=data[i].pic%>);"></div>
+						</td>
+						<td class="tdinfo">
+							<div><%=data[i].name%></div>
+							<div>￥<%=data[i].price%></div>
+							<p class="num_cart">
+								<span class="red_cart"></span>
+								<span class="num1_cart"><%=data[i].num%></span>
+								<span class="add_cart"></span>
+							</p>
+						</td>
+					</tr>
+				<%}%>
+			</script>
+			</tbody>
+		</table>
+		<div class="shopgoods_list5">
+			<div class="sumchex_box">
+				全选
+			</div>
+			<div class="sum1">
+				<span>共</span>
+				<span class="sumtotal">￥</span>
+			</div>
+			<div class="zhifu">选好了</div>
+			<div class="margin_b"></div>
+		</div>
+	</div>
+</main> 

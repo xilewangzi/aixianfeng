@@ -1,0 +1,120 @@
+
+<header class="header4">
+	<div class="hed_list">
+		<a href="../addres/addres.html">
+			<span>
+			北京市
+			</span>
+			<span class="sou"></span>
+		</a>
+	</div>
+	<span>
+		<a href="../search/search.html">
+			<div></div>
+			<span>搜 索</span>
+		</a>
+	</span>
+</header>
+<main>
+	<div class="main_list1">
+		<ul class="main_list1_ul1" id="home1mb1">
+			<script type="text/html" id="home1mb">
+				
+						<%for(var i = 0;i<data.act_info[0].act_rows.length;i++){%>
+							<li>
+								<div style="background-image:url(<%=data.act_info[0].act_rows[i].activity.img%>)"></div>
+								<p><%=data.act_info[0].act_rows[i].activity.name%></p>
+							</li>
+						<%}%>	
+			</script>
+		</ul>
+		<div class="huixian"></div>
+		<ul class="main_list1_ul2" id="home1mb3">
+			<script type="text/html" id="home3mb">
+				<%for(var n =0; n<3;n++){%>
+				<li style="background-image:url(<%=data.act_info[2].act_rows[n].activity.img%>)"></li>
+				<%}%>
+			</script>
+		</ul>
+		<div class="huixian"></div>
+		<div class="main_list1_3" id="home1mb4">
+			<script type="text/html" id="home4mb">
+				
+					<ul class="main_list1_3ul1">
+					<%for(var m =0; m<data.act_info[3].act_rows[0].act_rows.length;m++){%>
+						<li style="background-image:url(<%=data.act_info[3].act_rows[0].act_rows[m].chead_detail.img%>"></li>
+					<%}%>
+					</ul>
+					<ul class="main_list1_3ul2">
+					<%for(var m =0; m<data.act_info[3].act_rows[1].act_rows.length;m++){%>
+						<li style="background-image:url(<%=data.act_info[3].act_rows[1].act_rows[m].cactivity_detail.img%>"></li>
+					<%}%>
+					</ul>
+					<ul class="main_list1_ul1">
+
+						<%for(var m =0; m<data.act_info[3].act_rows[2].act_rows.length;m++){%>
+						<li>
+							<div style="background-image:url(<%=data.act_info[3].act_rows[2].act_rows[m].cicons_detail.img%>)"></div>
+							<p><%=data.act_info[3].act_rows[2].act_rows[m].cicons_detail.name%></p>
+						</li>
+						<%}%>
+
+					</ul>
+					<ul class="main_list1_ul4">
+					<%for(var m =0; m<data.act_info[3].act_rows[3].act_rows.length;m++){%>
+						<li style="background-image:url(<%=data.act_info[3].act_rows[3].act_rows[m].activity.img%>)"></li>
+					<%}%>
+					</ul>		
+			</script>
+		</div>
+		<div class="huixian"></div>
+	</div>
+	<div class="main_list2" id="home1mb2">
+		<script type="text/html" id="home2mb">
+			<%for(var n =0; n<data.act_info[4].act_rows.length;n++){%>
+				<div class="main_list2_list1">
+					<div class="main_list2_list1_div">
+						<div>
+							<span></span>
+							<span><%=data.act_info[4].act_rows[n].category_detail.name%></span>
+						</div>
+						<p>
+							<a href="###">更多</a>
+						</p>
+					</div>
+					<ul class="main_list2_list1_ul1">
+						<li style="">
+							<img src="<%=data.act_info[4].act_rows[n].activity.img%>">
+						</li>
+					</ul>
+					<ul class="main_list2_list1_ul2">
+						<li></li>
+					</ul>
+					<ul class="main_list2_list1_ul3">
+					<%for(var i in data.act_info[4].act_rows[n].category_detail.goods){%>
+						<li>
+							<div class="firut_1" style="background-image:url(<%=data.act_info[4].act_rows[n].category_detail.goods[i].img%>">
+							</div>
+							<div class="firut_2">
+								<div class="firut_2_1"><
+								%=data.act_info[4].act_rows[n].category_detail.goods[i].long_name%></div>
+								<div class="firut_2_2">
+									<span>精选</span>
+								</div>
+								<div  class="firut_2_3">
+								<%=data.act_info[4].act_rows[n].category_detail.goods[i].specifics%>
+								</div>
+								<div class="firut_2_4">
+									￥<%=data.act_info[4].act_rows[n].category_detail.goods[i].market_price%>
+								</div>
+								<span class="firut_2_span">+</span>
+							</div>
+						</li>
+					<%}%>
+					</ul>
+				</div>
+				<div class="huixian"></div>
+			<%}%>
+		</script>
+	</div>		
+</main>

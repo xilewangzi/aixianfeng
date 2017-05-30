@@ -1,0 +1,109 @@
+{
+    "errno": 0,
+    "errmsg": "ok",
+    "logid": "58a118078261a8846",
+    "data": {
+        "code": "200",
+        "msg": "success",
+        "reqid": "ec88eec923532f5cb4c7f215e58daf67",
+        "data": {
+            "username": "15702473643",
+            "name": "V0",
+            "usable_point": "0",
+            "current_score": "0",
+            "last_score": "999",
+            "dif_score": "距下一等级还需 30 成长值",
+            "level": [
+                {
+                    "id": "1",
+                    "name": "V0",
+                    "lower_bound": "0",
+                    "point_weight": "5"
+                },
+                {
+                    "id": "2",
+                    "name": "V1",
+                    "lower_bound": "30",
+                    "point_weight": "10"
+                },
+                {
+                    "id": "3",
+                    "name": "V2",
+                    "lower_bound": "199",
+                    "point_weight": "15"
+                },
+                {
+                    "id": "4",
+                    "name": "V3",
+                    "lower_bound": "499",
+                    "point_weight": "20"
+                },
+                {
+                    "id": "5",
+                    "name": "V4",
+                    "lower_bound": "999",
+                    "point_weight": "30"
+                }
+            ],
+            "usable_balance": "0",
+            "strategy": [
+                {
+                    "id": "2",
+                    "types": "1",
+                    "contents": "会员等级有效期为1年，1年后扣减相应等级成长值，剩余成长值重新计算会员级别。",
+                    "sort": "0"
+                },
+                {
+                    "id": "3",
+                    "types": "2",
+                    "contents": "会员等级越高获得的积分越多。\r\n1、注册会员：0.5倍积分\r\n2、普通会员：1倍积分\r\n3、白银会员：1.5倍积分\r\n4、黄金会员：2倍积分\r\n5、钻石会员：3倍积分",
+                    "sort": "0"
+                },
+                {
+                    "id": "4",
+                    "types": "3",
+                    "contents": "1、注册会员：30>成长值>＝0；\r\n2、普通会员：199>成长值>＝30；\r\n3、白银会员：499>成长值>＝199；\r\n4、黄金会员：999>成长值>＝499；\r\n5、钻石会员：成长值>＝999；",
+                    "sort": "0"
+                },
+                {
+                    "id": "1",
+                    "types": "4",
+                    "contents": "1、购买精选商品实付金额1：1转化为成长值（不包含优惠券等抵扣部分）；\r\n2、在“天津、西安、成都、南京、佛山”下单，完成订单后可以获得10成长值；\r\n3、商品退换货，需扣除该商品所获得成长值；\r\n4、订单取消，需扣除该订单所获得成长值；\r\n5、因作弊等行为产生的成长值，爱鲜蜂有权扣除相应成长值；",
+                    "sort": "0"
+                }
+            ],
+            "task_hint": "成长值到账可能有延迟，请稍后查看",
+            "task_list": [
+                {
+                    "title": "上传头像",
+                    "content": "+10成长值",
+                    "has_button": "1",
+                    "button_text": "立即上传",
+                    "exc_status": "0"
+                },
+                {
+                    "title": "填写昵称",
+                    "content": "+10成长值",
+                    "has_button": "1",
+                    "button_text": "立即填写",
+                    "exc_status": "0"
+                },
+                {
+                    "title": "选择性别",
+                    "content": "+10成长值",
+                    "has_button": "1",
+                    "button_text": "立即先择",
+                    "exc_status": "0"
+                },
+                {
+                    "title": "设置年龄",
+                    "content": "+10成长值",
+                    "has_button": "1",
+                    "button_text": "立即设置",
+                    "exc_status": "0"
+                }
+            ],
+            "nickname": "15702473643"
+        }
+    }
+}

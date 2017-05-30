@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>在线销售系统</title>
+<meta charset="utf-8" />
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script>
+     function addShoppingCart(id,name,price,pic){
+         var isSave=false;
+         var goods = localStorage.getItem("goods");//取回goods变量
+         goods = JSON.parse(goods);//把字符串转换成JSON对象
+         if(goods!=null&&goods!="undefined"){ //如果不为空，则判断购物车中是否包含了当前购买的商品
+         var objs=goods.good;
+         for(var i=0;i<objs.length;i++){
+         isSave=false;
+         if(objs[i].id==id){ //说明该商品已在购物车，则数量加1
+         objs[i].num+=1;
+         isSave=true;
+         break;
+         }
+         }
+         if(!isSave){
+         objs[objs.length]={id:id,name:name,price:price,pic:pic,num:1};
+         }
+         }else{
+         var goods ={good:[
+         {id:id,name:name,price:price,pic:pic,num:1}]
+         }//要存储的JSON对象
+         }
+         goods = JSON.stringify(goods);//将JSON对象转化成字符串
+        localStorage.setItem("goods",goods);//用localStorage保存转化好的的字符串
+         $("#tishiInfo").fadeIn("show",function(){
+            $("#tishiInfo").fadeOut(2000);
+        });
+     }
+    </script>
+
+<style>
+table {
+border-collapse: collapse;
+}
+
+a {
+text-decoration: none;
+}
+
+td {
+text-align: center;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+#tishiInfo {
+border: 1px solid #699;
+border-radius: 3px;
+width: 200px;
+height: 30px;
+line-height: 30px;
+font-size: 14px;
+background: #C1E3D3 url(images/tishi.png) no-repeat left center;
+color: #fff;
+padding-left: 30px;
+position: absolute;
+top: 200px;
+left: 600px;
+display: none;
+font-size:12px;
+font-family:"微软雅黑";
+}
+</style>
+</head>
+
+<body>
+<center>
+<h2>
+<a href="front/shoppingCarts.html">去结算</a>
+</h2>
+</center>
+<table align="center" width="80%" border="1px">
+<thead>
+<tr height="40px">
+<th>商品图片</th>
+<th>商品编号</th>
+<th>商品名称</th>
+<th>商品价格</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody id="productInfo">
+
+</tbody>
+</table>
+<p id="tishiInfo">商品添加成功...</p>
+</body>
+</html>
+
+购物车页面
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>在线销售系统</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script>
+    
+$(function(){
+    
+showShoppingCart();
+    
+});
+    
+    
+function showShoppingCart(){
+    
+var info="";
+var goods = localStorage.getItem("goods");//取回goods变量
+    
+goods = JSON.parse(goods);//把字符串转换成JSON对象
+    
+if(goods!=null){ //如果不为空，则判断购物车中是否包含了当前购买的商品
+    
+var objs=goods.good;
+    
+for(var i=0;i<objs.length;i++){
+    
+info+="<tr><td><img src='../"+objs[i].pic+"' width='60px' height='60px' /></td><td>"+objs[i].id+"</td><td>"+objs[i].name
+    
++"</td><td>"+objs[i].price+"</td><td><a class='lefta' href=\"javascript:cutNum('good"+objs[i].id+"')\">-</a><input text='text' id='good"+
+    
+objs[i].id+"' value='"+objs[i].num+"' /><a class='righta' href=\"javascript:addNum('good"+objs[i].id+"')\">+</a></td><td>"+
+    
+"<a href=\"javascript:delGoodFromCart('"+objs[i].id+"')\">删除</a></td></tr>";
+    
+}
+    
+//$("#productInfo").append($(info));
+    
+$("#productInfo").html($(info));
+    
+}
+    
+}
+    
+    
+function addNum(id){
+    
+$("#"+id).val( parseInt($("#"+id).val())+1 );
+    
+}
+    
+    
+function cutNum(id){
+    
+var num=parseInt($("#"+id).val());
+    
+if(num>1){
+    
+$("#"+id).val( num-1 );
+    
+}
+    
+}
+    
+    
+function delGoodFromCart(id){
+    
+var goods = localStorage.getItem("goods");//取回goods变量
+    
+goods = JSON.parse(goods);//把字符串转换成JSON对象
+    
+if(goods!=null){ //如果不为空，则判断购物车中是否包含了当前购买的商品
+    
+var objs=goods.good;
+    
+for(var i=0;i<objs.length;i++){
+    
+if(objs[i].id==id){ //说明该商品已在购物车，则数量加1
+    
+objs.splice(i,1);  //删除元素
+    
+goods = JSON.stringify(goods);//将JSON对象转化成字符串
+    
+localStorage.setItem("goods",goods);//用localStorage保存转化好的的字符串
+    
+showShoppingCart();
+    
+return;
+    
+}
+    
+}
+    
+}
+    
+}
+    
+    </script>
+    
+    <style>
+    
+table{
+    
+border-collapse:collapse;
+    
+}
+    
+    
+a{
+    
+text-decoration: none;
+    
+}
+    
+    
+td{
+    
+text-align:center;
+    
+}
+    
+    
+a:hover{
+    
+text-decoration:underline;
+    
+}
+    
+    
+td input{
+    
+width:40px;
+    
+text-align:center;
+    
+}
+    
+    
+.lefta{
+    
+margin-right:10px;
+    
+font-size:20px;
+    
+}
+    
+    
+.righta{
+    
+margin-left:10px;
+    
+font-size:20px;
+    
+}
+    
+    
+.lefta:hover,.righta:hover{
+    
+text-decoration:none;
+    
+}
+    </style>
+  </head>
+  
+  <body>
+  
+<center><h2><a href="../index.html">去购买</a></h2></center>
+<table align="center" width="80%" border="1px">
+<thead>
+<tr height="40px">
+<th>商品图片</th>
+<th>商品编号</th>
+<th>商品名称</th>
+<th>商品价格</th>
+<th>购买数量</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody id="productInfo">
+</tbody>
+</table>
+  </body>
+</html>

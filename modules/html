@@ -1,0 +1,85 @@
+define(["text!./modules/cart/cart.html","text!./modules/cart/cart2.html", "css!./modules/cart/cart.css", "baiduTemplate"], function(cartPage, cart2Page){
+	return {
+		init: function(){
+			if(Storage){
+				if(window.localStorage.goods !=null&&window.localStorage.goods !="undefined"){
+					var goods = JSON.parse(window.localStorage.goods);
+					$("#container").html(cart2Page);
+					var htmlStr = baidu.template("cart_shop_list", {data: goods.good});
+					$(".selected_goods").html(htmlStr);
+				}else{
+					$("#container").html(cartPage);
+				}
+				
+			}else{
+				console.log("您的浏览器不支持本地存储");
+			}	
+		}
+	}
+});
+//点击底部菜单切换背景图
+			$(".bot_bar_ul").on("click", "li", function(){
+				$(this).children().children(".bot_bar_icon").addClass("nav-current").parent().parent().siblings().children().children(".bot_bar_icon").removeClass("nav-current");
+			});
+
+			//点击添加商品按钮 将商品信息写入本地存储
+			function addShoppingCart(id,name,price,pic){
+				var isSave=false;
+				var goods = localStorage.getItem("goods");//取回goods变量
+				goods = JSON.parse(goods);//把字符串转换成JSON对象
+				if(goods!=null&&goods!="undefined"){ //如果不为空，则判断购物车中是否包含了当前购买的商品
+					var objs=goods.good;
+					var nums=goods.total_count;
+					for(var i=0;i<objs.length;i++){
+						isSave=false;
+						if(objs[i].id==id){ //说明该商品已在购物车，则数量加1
+							objs[i].num+=1;
+							nums.total+=1;
+							isSave=true;
+							break;
+						}
+					}
+					if(!isSave){
+						objs[objs.length]={id:id,name:name,price:price,pic:pic,num:1};
+						nums.total+=1;
+					}
+				}else{
+					var goods ={
+						good:[
+						{id:id,name:name,price:price,pic:pic,num:1}
+						],
+						total_count:{total: 1}
+					}//要存储的JSON对象
+				}
+				goods = JSON.stringify(goods);//将JSON对象转化成字符串
+				localStorage.setItem("goods",goods);//用localStorage保存转化好的的字符串
+			}
+
+			function delShoppingCart(id){
+				var goods = localStorage.getItem("goods");//取回goods变量
+				goods = JSON.parse(goods);//把字符串转换成JSON对象
+				var objs=goods.good;
+				var nums=goods.total_count;
+				for(var i=0;i<objs.length;i++){
+					if(objs[i].id==id){ //说明该商品已在购物车，则数量加1
+						if(objs[i].num=1){
+
+						}else{
+							objs[i].num-=1;
+							nums.total-=1;
+							break;
+						}
+						
+					}
+				}
+			}
+
+			//购物车实时显示商品总数量
+			function showNum(){
+				if(localStorage.goods == null||localStorage.goods == "undefined"){
+					return
+				}
+				var goods = JSON.parse(localStorage.goods);
+				var shopNum = Number(goods.total_count.total);
+				$("#cart_good_num").text(shopNum);
+			}

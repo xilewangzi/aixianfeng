@@ -1,0 +1,143 @@
+@charset "utf-8";
+*{
+	margin:0;padding:0;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+html{
+	font-size:100px;
+}
+body{
+	font-size: .16rem;
+	font-family:"Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
+}
+/*===============头部========================*/
+header{
+	width:100%;
+	height:.54rem;
+	border-bottom:1px solid #e0e0e0;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color:#f9fafd;
+}
+header>span{
+	float:left;
+	width:.45rem;
+	height:.54rem;
+	background:url(image/addres1.png) no-repeat center;
+	background-size:auto .3rem;
+}
+header>div{
+	width:2.3rem;
+	margin-left:.3rem;
+	float: left;
+	text-align:center;
+	line-height:.54rem;
+	font-weight:bold;
+}
+header>span:last-of-type{
+	background:url(image/home2.png) no-repeat center;
+	background-size:auto .3rem;
+
+}
+/*=======================================*/
+main{
+	margin-top:.55rem;
+	background-color: #efefef;
+}
+.headimg{
+	height:2.16rem;
+	background-size:100% 100%;
+	background-position:center center;
+}
+.sume_list1{
+	height:.42rem ;
+	background-size:auto 100%;
+	background-position:center center;
+
+}
+.sume_list2{
+	background-color:#efefef;
+}
+.sume_list2_a{
+	overflow:hidden;
+	padding:.11rem;
+	width:3.28rem;
+	margin:0 auto;
+	background-color:#fff;
+	margin-bottom:.11rem;
+}
+.sume_list2_1{
+	float:left;
+	width:1.45rem;
+	margin-right:.1rem;
+}
+.sume_list2_1 img{
+	width:1.45rem;
+}
+.sume_list2_2{
+	float:left;
+	margin-top:0.2rem;
+}
+.sume_list2_2a{
+	line-height:.26rem;
+}
+.sume_list2_2a1{
+	color:red;
+	font-size:.26rem;
+	font-style:italic;
+}
+.sume_list2_2a2{
+	font-style:italic;
+	color:#999;
+}
+.sume_list2_2b{
+	width:.94rem;
+	height: .28rem;
+	background-color:#c11328;
+	color:#fff;
+	border-radius:.14rem;
+	text-align:center;
+	line-height:.28rem;
+	margin:0 auto;
+}
+/*===================================*/
+.hot_list1{
+	display:flex;
+	flex-wrap:wrap;
+}
+.hot_list1a{
+	width:32%;
+	margin:0;
+	margin:.02rem;
+	background-color:#fff;
+}
+.hot_list1a1_img{
+	width:100%
+}
+.hot_list1a2_p{
+	line-height:.2rem;
+	font-size:.14rem;
+}
+.hot_buy{
+	background-color:#F10027;
+	color:#fff;
+	line-height:.3rem;
+	text-align:center;
+}
+/*==============================*/
+.move_list1{
+	width:2.97rem;
+	margin: 0 auto;
+	font-size:.14rem;
+	padding:.2rem 0 .5rem 0;
+}
+.move_list1>li{
+	line-height:.22rem;
+}
+

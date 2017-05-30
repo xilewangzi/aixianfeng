@@ -1,0 +1,127 @@
+@charset "utf-8";
+*{
+	margin:0;padding:0;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-size: .16rem;
+	font-family:"Myriad Set Pro","Lucida Grande","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif,'Microsoft Yahei',Simsun;
+}
+/*===============头部========================*/
+header{
+	width:100%;
+	height:.54rem;
+	border-bottom:1px solid #e0e0e0;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color:#f9fafd;
+}
+header>span{
+	float:left;
+	width:.45rem;
+	height:.54rem;
+	background:url(image/addres1.png) no-repeat center;
+	background-size:auto .25rem;
+}
+header>span>a{
+	display:block;
+	width:100%;
+	height:100%;
+}
+header>div{
+	width:2.3rem;
+	margin-left:.3rem;
+	float: left;
+	text-align:center;
+	line-height:.54rem;
+	font-weight:bold;
+}
+/*===================================*/
+main{
+	background-color:#efefef;
+	margin-top:.55rem;
+	min-height:6rem;
+}
+.addres1{
+	background-color:#fff;
+}
+.addres1>span {
+	display:block;
+	width:2.3rem;
+	min-height:.53rem;
+	margin:0 auto;
+	text-align:center;
+	line-height: .53rem;
+	background:url(image/addres2.png) no-repeat .3rem center;
+	background-size:auto .25rem;
+	margin-bottom:.12rem ;
+}
+.addres2_list{
+	background-color:#fff;
+	min-height:.96rem;
+}
+.addres2_list1{
+	min-height:.96rem;
+	
+}
+.addres2_list1>p{
+	min-width:1.63rem;
+	margin:.17rem 0 0 .17rem;
+}
+.addres2_list>li>div{
+	float:left;
+}
+
+.addres2_list2{
+	min-height:.62rem;
+	width:.97rem;
+	background:url(image/addres5.png) no-repeat center;
+	background-size:auto .3rem;
+	border-left:1px solid #e0e0e0;
+	margin-top:.17rem;
+}
+.addres2_list2 a{
+	display:block;
+	width:100%;
+	height:.62rem;
+}
+.addres2_list3{
+	min-height:.96rem;
+	width:.96rem;
+	background-color: red;
+	text-align:center;
+	line-height:.96rem;
+	overflow:hidden;
+	color:#fff;
+}
+/*========底部==============================*/
+footer{
+	width:100%;
+	min-height:.6rem;
+	position:fixed;
+	bottom:0;
+	right:0;
+	background-color:#fff;
+}
+.new_add{
+	margin:0 auto;
+	margin-top:.08rem;
+	width:2.25rem;
+	height:.44rem;
+	background-color:#ffd600;
+	border-radius:.04rem;
+	text-align:center;
+	line-height:.44rem;
+}
+
+
+

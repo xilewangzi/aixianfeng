@@ -1,0 +1,50 @@
+<script type="text/html" id="home2mb">
+	<%for(var n =0; n<data.act_info[4].act_rows.length;n++){%>
+		<div class="main_list2_list1">
+			<div class="main_list2_list1_div">
+				<div>
+					<span></span>
+					<span><%=data.act_info[4].act_rows[n].category_detail.name%></span>
+				</div>
+				<p>
+					<a href="###">更多</a>
+				</p>
+			</div>
+			<ul class="main_list2_list1_ul1">
+				<li style="">
+					<img src="<%=data.act_info[4].act_rows[n].activity.img%>">
+				</li>
+			</ul>
+			<ul class="main_list2_list1_ul2">
+				<li></li>
+			</ul>
+			<ul class="main_list2_list1_ul3">
+			<%for(var i in data.act_info[4].act_rows[n].category_detail.goods){%>
+				<li>
+					<div class="firut_1" style="background-image:url(<%=data.act_info[4].act_rows[n].category_detail.goods[i].img%>">
+					</div>
+					<div class="firut_2">
+						<div class="firut_2_1"><
+						%=data.act_info[4].act_rows[n].category_detail.goods[i].long_name%></div>
+						<div class="firut_2_2">
+							<span>精选</span>
+						</div>
+						<div  class="firut_2_3">
+						<%=data.act_info[4].act_rows[n].category_detail.goods[i].specifics%>
+						</div>
+						<div class="firut_2_4">
+							￥<%=data.act_info[4].act_rows[n].category_detail.goods[i].market_price%>
+						</div>
+						<span class="firut_2_span">+</span>
+					</div>
+				</li>
+			<%}%>
+			</ul>
+		</div>
+		<div class="huixian"></div>
+	<%}%>
+</script>
+
+
+
+

@@ -1,0 +1,5 @@
+<script type="text/html" id="marketleft">
+<%for(var n in data.categories){%>
+	<li style="background:url(<%=data.categories[n].flag%>) right top no-repeat;background-size:auto 80%;" data_id="<%=data.categories[n].id%>" class="liborder"><%=data.categories[n].name%></li>
+<%}%>
+</script>
